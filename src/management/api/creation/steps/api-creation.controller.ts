@@ -209,6 +209,7 @@ class ApiCreationController {
 
   _createAPI(deployAndStart, readyForReview?: boolean) {
     var _this = this;
+    this.api.gravitee = '2.0.0';
     // clear API pages json format
     _.forEach(this.api.pages, function (page) {
       if (!page.name) {

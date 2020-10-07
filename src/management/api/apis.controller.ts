@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { IScope } from 'angular';
 import * as _ from 'lodash';
 
 import UserService from '../../services/user.service';
@@ -45,6 +46,7 @@ export class ApisController {
   constructor(private ApiService: ApiService,
               private $mdDialog: ng.material.IDialogService,
               private $scope: IApisScope,
+              private $rootScope: IScope,
               private $state: StateService,
               private Constants,
               private Build,

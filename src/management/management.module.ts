@@ -482,6 +482,8 @@ import CustomUserFieldsService from '../services/custom-user-fields.service';
 import NewFieldDialogController from './configuration/custom-user-fields/dialog/new.custom-user-field.dialog.controller';
 import DeleteFieldDialogController from './configuration/custom-user-fields/dialog/delete.custom-user-field.dialog.controller';
 import UpdateFieldDialogController from './configuration/custom-user-fields/dialog/update.custom-user-field.dialog.controller';
+import FlowService from '../services/flow.service';
+import ApiPolicyStudioController from './api/design/policy-studio/policy-studio.controller';
 
 (<any>window).jQuery = jQuery;
 
@@ -489,10 +491,10 @@ import angular = require('angular');
 
 import ngInfiniteScroll = require('ng-infinite-scroll');
 
-
 (<any>window).traverse = traverse;
 
 (<any>window).marked = marked;
+
 
 (<any>window).hljs = hljs;
 
@@ -500,7 +502,6 @@ import ngInfiniteScroll = require('ng-infinite-scroll');
 
 // tslint:disable:no-var-requires
 require('satellizer');
-
 require('angular-marked');
 require('angular-highlightjs');
 
@@ -666,6 +667,7 @@ angular.module('gravitee-management', [uiRouter, permission, uiPermission, 'ngMa
   .component('gvHttpConfiguration', HttpConfigurationComponent)
   .controller('DialogAssertionInformationController', DialogAssertionInformationController)
   .controller('ApiPropertiesController', ApiPropertiesController)
+  .controller('ApiPolicyStudioController', ApiPolicyStudioController)
   .controller('ApiEventsController', ApiEventsController)
   .controller('ApiHistoryController', ApiHistoryController)
   .controller('ApiResourcesController', ApiResourcesController)
@@ -766,6 +768,7 @@ angular.module('gravitee-management', [uiRouter, permission, uiPermission, 'ngMa
   .service('ReCaptchaService', ReCaptchaService)
   .service('TokenService', TokenService)
   .service('EnvironmentService', EnvironmentService)
+  .service('FlowService', FlowService)
   .controller('DialogGenerateTokenController', DialogGenerateTokenController)
 
   .directive('filecontent', () => FileContentDirective)

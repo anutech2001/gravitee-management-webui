@@ -33,6 +33,13 @@ module.exports = {
         enforce: 'pre'
       },
       {
+        test: /\.css$/i,
+        loader: 'css-loader',
+        options: {
+          modules: true
+        }
+      },
+      {
         test: /\.(css|scss)$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
         include: [
@@ -107,7 +114,7 @@ module.exports = {
       }
     ], {
       copyUnmodified: true
-    })
+    }),
   ],
   devtool: 'inline-source-map',
   output: {

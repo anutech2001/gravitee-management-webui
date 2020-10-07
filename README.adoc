@@ -26,6 +26,22 @@ If you don't install this library, you may have such errors when you'll do npm i
 ERROR in ./~/css-loader?importLoaders=1!./~/sass-loader!./~/postcss-loader!./src/index.scss Module build failed: Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (57) For more information on which environments are supported please see: https://github.com/sass/node-sass/releases/tag/v3.13.1
 ```
 
+== About WIP dependencies
+
+This project use project https://github.com/gravitee-io/gravitee-ui-components[Gravitee UI Components].
+If you want to develop in parallel, you can clone repository and link to project.
+
+```shell script
+git clone git@github.com:gravitee-io/gravitee-ui-components.git
+pushd gravitee-ui-components
+npm link
+popd
+
+pushd gravitee-management-webui
+npm link @gravitee/ui-components
+popd
+```
+
 == Tasks
 
 If you wanna serve the built version on dev mode :

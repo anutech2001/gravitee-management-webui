@@ -20,7 +20,8 @@
   },
   "compileOnSave": false,
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "node_modules/@gravitee/ui-components"
   ],
   "exclude": [
     "node_modules"
